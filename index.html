@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine? 💕</title>
+    <title>Niru will You Be My Valentine? 💕</title>
     <style>
         * {
             margin: 0;
@@ -236,7 +236,7 @@
                 🐱
                 <span class="heart-icon">💗</span>
             </div>
-            <h1>Will you be my Valentine?</h1>
+            <h1>Niru will you be my Valentine?</h1>
             <div class="buttons-container" id="buttonsContainer">
                 <button class="yes-btn" onclick="selectYes()">Yes</button>
                 <button class="no-btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
@@ -250,7 +250,7 @@
                 🐱
                 <span class="heart-icon">💗</span>
             </div>
-            <h1>Will you be my Valentine?</h1>
+            <h1>Niru will you be my Valentine?</h1>
             <div class="celebration-text">YAY! 🎉</div>
             <div class="celebration-image">
                 <img src="couple1.png" alt="Happy Couple">
@@ -258,6 +258,13 @@
             <footer>Powered by Skillkoder 💕</footer>
         </div>
     </div>
+
+    <!-- Background Music - Replace src with your favorite romantic song -->
+    <audio id="bgMusic" loop>
+        <source src="audio.mp3" type="audio/wav">
+        <!-- Alternative: Add your own music file like 'romantic-music.mp3' -->
+        Your browser does not support the audio element.
+    </audio>
 
     <script>
         const noBtn = document.getElementById('noBtn');
@@ -291,6 +298,10 @@
             
             // Create confetti effect
             createConfetti();
+
+            // Play background music
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.play().catch(e => console.log('Audio play failed:', e));
         }
 
         function createConfetti() {
